@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R/place Cebem</title>
+    <style>
+        /* La rejilla para que los 10.000 divs se vean como un cuadrado */
+        #board {
+            display: grid;
+            /* Forzamos 100 columnas de exactamente 10px */
+            grid-template-columns: repeat(100, 10px); 
+            /* Forzamos 100 filas de exactamente 10px */
+            grid-template-rows: repeat(100, 10px);
+            width: 1000px; 
+            height: 1000px;
+            border: 2px solid #000;
+            margin-top: 20px;
+            background-color: #fff;
+            /* Evita que los divs hijos se salgan */
+            overflow: hidden;
+        }
+        .pixel {
+            width: 10px;
+            height: 10px;
+            box-sizing: border-box;
+            border: 0.1px solid #e0e0e0;
+            cursor: crosshair;
+            /* Color inicial para confirmar que existen */
+            background-color: white;
+        }
+        .pixel:hover {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>R/place Cebem</h1>
+    <input type="color" id="color" value="#000000"/>
+    
+    <div id="board"></div>
+
+    <script src="app2.js"></script>
+</body>
+</html>
